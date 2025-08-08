@@ -1,4 +1,4 @@
-/* LibreTTS - 全新清爽布局与配色，按钮对称统一 */
+/* LibreTTS - 全新紫色主题，优化表单控件对称性 */
 
 /* 基础设置 */
 * {
@@ -8,9 +8,9 @@
 }
 
 body {
-    background: linear-gradient(180deg, #f0fdf4 0%, #e0f7fa 100%);
+    background: linear-gradient(180deg, #f3e5f5 0%, #e8eaf6 100%);
     font-family: 'Segoe UI', sans-serif;
-    color: #2e7d32;
+    color: #4a148c;
     line-height: 1.6;
     padding: 20px;
 }
@@ -22,11 +22,73 @@ body {
     padding: 0 20px;
 }
 
+/* 表单控件统一样式 */
+.form-control {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid #d1c4e9;
+    border-radius: 8px;
+    font-size: 1rem;
+    background: #fff;
+    color: #4a148c;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: #9575cd;
+    box-shadow: 0 0 0 3px rgba(149, 117, 205, 0.2);
+}
+
+/* API选择框和语音选择框特殊样式 */
+.api-select, .voice-select {
+    display: block;
+    width: 100%;
+    height: 50px; /* 统一高度 */
+    padding: 12px 16px;
+    border: 2px solid #d1c4e9;
+    border-radius: 8px;
+    font-size: 1rem;
+    background: #fff;
+    color: #4a148c;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%234a148c' d='M10.293 3.293L6 7.586 1.707 3.293A1 1 0 00.293 4.707l5 5a1 1 0 001.414 0l5-5a1 1 0 10-1.414-1.414z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+}
+
+.api-select:focus, .voice-select:focus {
+    outline: none;
+    border-color: #9575cd;
+    box-shadow: 0 0 0 3px rgba(149, 117, 205, 0.2);
+}
+
+/* 表单布局 */
+.form-row {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.form-group {
+    flex: 1;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #4a148c;
+}
+
 /* 统一按钮样式 */
 .btn {
     display: inline-block;
     padding: 12px 28px;
-    min-width: 140px; /* 统一宽度 */
+    min-width: 160px; /* 统一宽度 */
+    height: 50px; /* 统一高度 */
     border-radius: 8px;
     border: none;
     font-weight: 600;
@@ -35,15 +97,16 @@ body {
     cursor: pointer;
     transition: all 0.3s ease;
     letter-spacing: 0.5px;
+    line-height: 1.2; /* 确保文字垂直居中 */
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, #4fc3f7, #29b6f6);
+    background: linear-gradient(135deg, #9575cd, #7e57c2);
     color: #fff;
 }
 
 .btn-primary:hover {
-    background: linear-gradient(135deg, #29b6f6, #0288d1);
+    background: linear-gradient(135deg, #7e57c2, #673ab7);
 }
 
 .btn-success {
@@ -53,6 +116,15 @@ body {
 
 .btn-success:hover {
     background: linear-gradient(135deg, #66bb6a, #388e3c);
+}
+
+.btn-info {
+    background: linear-gradient(135deg, #64b5f6, #42a5f5);
+    color: #fff;
+}
+
+.btn-info:hover {
+    background: linear-gradient(135deg, #42a5f5, #2196f3);
 }
 
 .btn-warning {
@@ -70,6 +142,7 @@ body {
     flex-wrap: wrap;
     gap: 1rem;
     justify-content: center;
+    margin-top: 1rem;
 }
 
 /* 网格布局 */
@@ -97,7 +170,7 @@ body {
     padding: 1.5rem;
     font-size: 1.4rem;
     font-weight: bold;
-    background: linear-gradient(135deg, #4fc3f7, #81c784);
+    background: linear-gradient(135deg, #9575cd, #64b5f6);
     color: white;
 }
 
@@ -107,7 +180,7 @@ body {
 
 /* 历史记录列表 */
 .history-container {
-    background: #f9fbe7;
+    background: #f3e5f5;
     border-radius: 10px;
     padding: 1rem;
     max-height: 500px;
@@ -116,7 +189,7 @@ body {
 
 .history-item {
     background: white;
-    border: 1px solid #c8e6c9;
+    border: 1px solid #e1bee7;
     border-radius: 8px;
     padding: 0.75rem;
     margin-bottom: 0.5rem;
@@ -124,7 +197,7 @@ body {
 }
 
 .history-item:hover {
-    background: #f1f8e9;
+    background: #f8f0fc;
 }
 
 /* 滚动条 */
@@ -133,7 +206,7 @@ body {
 }
 
 .history-container::-webkit-scrollbar-thumb {
-    background: #81c784;
+    background: #9575cd;
     border-radius: 4px;
 }
 
@@ -141,5 +214,27 @@ body {
 footer {
     text-align: center;
     margin-top: 2rem;
-    color: #4f9a94;
+    color: #7e57c2;
+}
+
+/* 音频播放器 */
+audio {
+    width: 100%;
+    margin-top: 1rem;
+    border-radius: 8px;
+}
+
+/* 加载动画 */
+.loading {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(149, 117, 205, 0.3);
+    border-radius: 50%;
+    border-top-color: #9575cd;
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
 }
