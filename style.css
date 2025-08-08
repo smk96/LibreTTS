@@ -1,4 +1,4 @@
-/* LibreTTS - 全新紫色主题，优化表单控件对称性 */
+/* LibreTTS - 全新配色主题，优化表单布局 */
 
 /* 基础设置 */
 * {
@@ -8,9 +8,9 @@
 }
 
 body {
-    background: linear-gradient(180deg, #f3e5f5 0%, #e8eaf6 100%);
+    background: linear-gradient(180deg, #fff8e1 0%, #e3f2fd 100%);
     font-family: 'Segoe UI', sans-serif;
-    color: #4a148c;
+    color: #2e7d32;
     line-height: 1.6;
     padding: 20px;
 }
@@ -26,61 +26,64 @@ body {
 .form-control {
     width: 100%;
     padding: 12px 16px;
-    border: 2px solid #d1c4e9;
+    border: 2px solid #90caf9;
     border-radius: 8px;
     font-size: 1rem;
     background: #fff;
-    color: #4a148c;
+    color: #2e7d32;
     transition: all 0.3s ease;
 }
 
 .form-control:focus {
     outline: none;
-    border-color: #9575cd;
-    box-shadow: 0 0 0 3px rgba(149, 117, 205, 0.2);
+    border-color: #42a5f5;
+    box-shadow: 0 0 0 3px rgba(66, 165, 245, 0.2);
 }
 
-/* API选择框和语音选择框特殊样式 */
+/* API选择框和语音选择框特殊样式 - 确保在一行 */
 .api-select, .voice-select {
     display: block;
     width: 100%;
     height: 50px; /* 统一高度 */
     padding: 12px 16px;
-    border: 2px solid #d1c4e9;
+    border: 2px solid #90caf9;
     border-radius: 8px;
     font-size: 1rem;
     background: #fff;
-    color: #4a148c;
+    color: #2e7d32;
     cursor: pointer;
     transition: all 0.3s ease;
     appearance: none;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%234a148c' d='M10.293 3.293L6 7.586 1.707 3.293A1 1 0 00.293 4.707l5 5a1 1 0 001.414 0l5-5a1 1 0 10-1.414-1.414z'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%232e7d32' d='M10.293 3.293L6 7.586 1.707 3.293A1 1 0 00.293 4.707l5 5a1 1 0 001.414 0l5-5a1 1 0 10-1.414-1.414z'/%3E%3C/svg%3E");
     background-repeat: no-repeat;
     background-position: right 16px center;
 }
 
 .api-select:focus, .voice-select:focus {
     outline: none;
-    border-color: #9575cd;
-    box-shadow: 0 0 0 3px rgba(149, 117, 205, 0.2);
+    border-color: #42a5f5;
+    box-shadow: 0 0 0 3px rgba(66, 165, 245, 0.2);
 }
 
-/* 表单布局 */
+/* 表单布局 - 确保两个选择框在一行 */
 .form-row {
     display: flex;
     gap: 1rem;
     margin-bottom: 1rem;
+    align-items: center;
 }
 
-.form-group {
+.form-row .form-group {
     flex: 1;
+    margin-bottom: 0;
 }
 
 .form-group label {
     display: block;
     margin-bottom: 0.5rem;
     font-weight: 600;
-    color: #4a148c;
+    color: #2e7d32;
+    font-size: 0.9rem;
 }
 
 /* 统一按钮样式 */
@@ -101,39 +104,39 @@ body {
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, #9575cd, #7e57c2);
+    background: linear-gradient(135deg, #42a5f5, #2196f3);
     color: #fff;
 }
 
 .btn-primary:hover {
-    background: linear-gradient(135deg, #7e57c2, #673ab7);
+    background: linear-gradient(135deg, #2196f3, #1976d2);
 }
 
 .btn-success {
-    background: linear-gradient(135deg, #81c784, #66bb6a);
+    background: linear-gradient(135deg, #66bb6a, #4caf50);
     color: #fff;
 }
 
 .btn-success:hover {
-    background: linear-gradient(135deg, #66bb6a, #388e3c);
+    background: linear-gradient(135deg, #4caf50, #388e3c);
 }
 
 .btn-info {
-    background: linear-gradient(135deg, #64b5f6, #42a5f5);
+    background: linear-gradient(135deg, #26a69a, #009688);
     color: #fff;
 }
 
 .btn-info:hover {
-    background: linear-gradient(135deg, #42a5f5, #2196f3);
+    background: linear-gradient(135deg, #009688, #00796b);
 }
 
 .btn-warning {
-    background: linear-gradient(135deg, #ffb74d, #ff9800);
+    background: linear-gradient(135deg, #ffa726, #ff9800);
     color: #fff;
 }
 
 .btn-warning:hover {
-    background: linear-gradient(135deg, #ff9800, #f57c00);
+    background: linear-gradient(135deg, #ff9800, #fb8c00);
 }
 
 /* 按钮组 */
@@ -170,7 +173,7 @@ body {
     padding: 1.5rem;
     font-size: 1.4rem;
     font-weight: bold;
-    background: linear-gradient(135deg, #9575cd, #64b5f6);
+    background: linear-gradient(135deg, #42a5f5, #66bb6a);
     color: white;
 }
 
@@ -180,7 +183,7 @@ body {
 
 /* 历史记录列表 */
 .history-container {
-    background: #f3e5f5;
+    background: #e8f5e9;
     border-radius: 10px;
     padding: 1rem;
     max-height: 500px;
@@ -189,7 +192,7 @@ body {
 
 .history-item {
     background: white;
-    border: 1px solid #e1bee7;
+    border: 1px solid #c8e6c9;
     border-radius: 8px;
     padding: 0.75rem;
     margin-bottom: 0.5rem;
@@ -197,7 +200,7 @@ body {
 }
 
 .history-item:hover {
-    background: #f8f0fc;
+    background: #f1f8e9;
 }
 
 /* 滚动条 */
@@ -206,7 +209,7 @@ body {
 }
 
 .history-container::-webkit-scrollbar-thumb {
-    background: #9575cd;
+    background: #66bb6a;
     border-radius: 4px;
 }
 
@@ -214,7 +217,7 @@ body {
 footer {
     text-align: center;
     margin-top: 2rem;
-    color: #7e57c2;
+    color: #42a5f5;
 }
 
 /* 音频播放器 */
@@ -229,12 +232,24 @@ audio {
     display: inline-block;
     width: 20px;
     height: 20px;
-    border: 3px solid rgba(149, 117, 205, 0.3);
+    border: 3px solid rgba(66, 165, 245, 0.3);
     border-radius: 50%;
-    border-top-color: #9575cd;
+    border-top-color: #42a5f5;
     animation: spin 1s ease-in-out infinite;
 }
 
 @keyframes spin {
     to { transform: rotate(360deg); }
+}
+
+/* 响应式调整 - 确保小屏幕下选择框也能在一行 */
+@media (max-width: 768px) {
+    .form-row {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .form-row .form-group {
+        margin-bottom: 0.5rem;
+    }
 }
